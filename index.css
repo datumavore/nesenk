@@ -1,0 +1,210 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body .marquee-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+    flex-direction: row;
+}
+
+p {
+    font-family: "Neue Plak", sans-serif;
+    letter-spacing: 1%;
+    font-size: 13px;
+    line-height: 160%;
+    margin: 0;
+}
+
+.main {
+    overflow-x: hidden;
+    width: 360px;
+    position: relative;
+    margin: 0;
+}
+
+.main img {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    margin: 0;
+}
+
+.main .content a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ANNOUCEMENT BAR */
+
+.marquee-box .marquee {
+    width: 100%;
+    background-color: black;
+    background: linear-gradient(0deg,rgba(108, 108, 108, 1) 0%, rgba(210, 210, 210, 1) 100%);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.marquee-box .marquee p {
+    display: inline-block;
+    padding-right: 10%;
+    padding-bottom: 4px;
+    animation: marquee 2s linear infinite;
+    animation-direction: reverse;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* POP-UP 1 */
+
+.main .content .popup-box-one {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.main .content .popup-box-one .popup-one {
+    position: absolute;
+    top: 68px;
+    left: 66px;
+    z-index: 1;
+    display: block;
+    height: 190px;
+    width: auto;
+    animation: blink-animation1 1s steps(2, end) infinite;
+    -webkit-animation: blink-animation1 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation1 {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation1 {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* POP-UP 2 */
+
+.main .content .popup-box-two {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.main .content .popup-box-two .popup-two {
+    position: absolute;
+    top: 495px;
+    left: 88px;
+    z-index: 1;
+    display: block;
+    height: 190px;
+    width: auto;
+    animation: blink-animation2 1s steps(2, end) infinite;
+    -webkit-animation: blink-animation2 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation2 {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation2 {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* THANKS BUTTON */
+
+.main .content .button-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .content .button-box .button-thanks {
+    position: absolute;
+    top: 858px;
+    left: 105;
+    z-index: 1;
+    display: block;
+    height: 110px;
+    width: auto;
+    animation: pressing 1s steps(2, end) infinite;
+}
+
+@keyframes pressing {
+  0%   {scale: 1}
+  100% {scale: 0.9;}
+}
+
+/* ORDER BUTTON */
+
+.main .content .button-box .button-order {
+    position: absolute;
+    top: 1108px;
+    left: 166px;
+    z-index: 1;
+    display: block;
+    height: 48px;
+    width: auto;
+    animation: pressing 1s steps(2, end) infinite;
+}
+
+@keyframes pressing {
+  0%   {scale: 1}
+  100% {scale: 0.9;}
+}
+
+/* BUTTON CURSOR ICON */
+
+.main .content a .cursor-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .content a .cursor-box .cursor {
+    position: absolute;
+    top: 1098px;
+    left: 184px;
+    z-index: 1;
+    display: block;
+    height: 114px;
+    width: auto;
+    animation: clicking 1s steps(2, end) infinite;
+}
+
+@keyframes clicking {
+  0%   {scale: 1}
+  100% {scale: 0.9;}
+}
+
